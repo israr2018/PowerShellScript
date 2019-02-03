@@ -1,0 +1,1 @@
+﻿Get-SPWebApplication http://99sp6 | Update-SPInfoPathUserFileUrl -find "http://99sp6/sites/appraisals" -replace "http://99sp6/sites/appraisals/Lists"

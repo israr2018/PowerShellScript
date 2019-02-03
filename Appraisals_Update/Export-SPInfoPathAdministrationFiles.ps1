@@ -1,0 +1,1 @@
+﻿Export-SPInfoPathAdministrationFiles -path d:\file.cab

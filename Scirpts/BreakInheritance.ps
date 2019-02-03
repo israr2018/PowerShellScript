@@ -1,0 +1,16 @@
+﻿#Variables for Web URL, List Name
+$WebURL ="http://99sp6/sites/appraisals/"
+$ListName ="Manager Appraisals"
+ 
+#get the list object
+$List = (Get-SPweb $WebURL).lists.TryGetList($ListName)
+ 
+# If List Exists with Unique permission
+if ( ($list -ne $null) -and ($list.HasUniqueRoleAssignments) )
+ {
+      #Reset broken list inheritance
+      $list.ResetRoleInheritance()
+      Write-host "Broken Inheritance Reset on List:" $List.Title
+ }
+
+
